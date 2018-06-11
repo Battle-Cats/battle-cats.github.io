@@ -373,7 +373,7 @@ var SeedComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".tracks {\r\n    display: flex;\r\n}\r\n\r\n.track {\r\n    flex: 50%;\r\n}"
+module.exports = ".tracks {\r\n    display: flex;\r\n}\r\n\r\n.track {\r\n    flex: 50%;\r\n    white-space: nowrap;\r\n}"
 
 /***/ }),
 
