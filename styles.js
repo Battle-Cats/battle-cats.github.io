@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');\n/* Application-wide Styles */\n"
+module.exports = "@import url('https://unpkg.com/bootstrap@4.1.1/dist/css/bootstrap.min.css');\n"
 
 /***/ }),
 
