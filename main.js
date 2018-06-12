@@ -483,7 +483,7 @@ module.exports = ".tracks {\r\n    display: flex;\r\n}\r\n\r\n.track {\r\n    fl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"trackService.trackManager\">\n  <div class=\"form-group row\">\n    <app-seed class=\"col-lg-4\"></app-seed>\n    <div class=\"col-lg-4\">\n      <label>Gacha Set</label>\n      <select [(ngModel)]=\"selectedGacha\"\n              (ngModelChange)=\"onSelectedGachaChanged($event)\"\n              class=\"form-control\">\n        <option *ngFor=\"let gacha of trackService.trackManager.gachas\" \n                [ngValue]=\"gacha\">\n                {{gacha.name}}\n        </option>\n      </select>\n    </div>\n  </div>\n  <div class=\"form-group row\"></div>\n\n  <div class=\"tracks\" *ngIf=\"selectedGacha\">\n      <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackA\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n    <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackB\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n  </div>\n\n  <div>\n      <button class=\"btn btn-primary\" (click)=\"addRows(100)\">Add 100 Rows</button>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"trackService.trackManager\">\n  <div class=\"form-group row\">\n    <app-seed class=\"col-lg-4\"></app-seed>\n    <div class=\"col-lg-4\">\n      <label>Gacha Set</label>\n      <select [(ngModel)]=\"selectedGacha\"\n              (ngModelChange)=\"onSelectedGachaChanged($event)\"\n              class=\"form-control\">\n        <option *ngFor=\"let gacha of trackService.trackManager.gachas\" \n                [ngValue]=\"gacha\">\n                {{gacha.name}}\n        </option>\n      </select>\n    </div>\n    <div class=\"col-lg-4\">\n      <label>Guaranteed Draw Count</label>\n      <select [(ngModel)]=\"garUberOffset\"\n              class=\"form-control\">\n        <option *ngFor=\"let drawCount of garUberDrawOptions\"\n                [ngValue]=\"drawCount\">\n          {{drawCount}}+1\n        </option>\n      </select>\n    </div>\n  </div>\n  <div class=\"form-group row\"></div>\n\n  <div class=\"tracks\" *ngIf=\"selectedGacha\">\n      <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackA\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n    <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackB\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n  </div>\n\n  <div>\n      <button class=\"btn btn-primary\" (click)=\"addRows(100)\">Add 100 Rows</button>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -516,6 +516,7 @@ var TrackComponent = /** @class */ (function () {
         this.trackService = trackService;
         this.selectedGacha = null;
         this.garUberOffset = 10;
+        this.garUberDrawOptions = [10, 7];
         this.selectedGachaKey = "battlecats.selectedGacha";
         this.trackService.isReady.subscribe(function (ready) {
             if (_this.selectedGacha === null && ready)
