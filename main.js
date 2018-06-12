@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{title}}</h1>\n<div class=\"container container-fluid\">\n    <div class=\"row flex-xl\">\n        <div class=\"col-12 col-xl-12\">\n            <ngb-tabset>\n                <ngb-tab title=\"Track\">\n                    <ng-template ngbTabContent>\n                        <app-seed></app-seed>\n                        <app-track></app-track>\n                    </ng-template>\n                </ngb-tab>\n                <ngb-tab title=\"Cat Sets\">\n                    <ng-template ngbTabContent>\n                        <app-cat-sets></app-cat-sets>\n                    </ng-template>\n                </ngb-tab>\n            </ngb-tabset>\n        </div>\n    </div>\n</div>\n<!-- <app-cat-sets></app-cat-sets>\n<app-cats></app-cats> -->"
+module.exports = "<div class=\"container root\">\n    <h1 class=\"h1\">{{title}}</h1>\n    <div class=\"row flex-xl\">\n        <div class=\"col-12 col-xl-12\">\n            <ngb-tabset>\n                <ngb-tab title=\"Track\">\n                    <ng-template ngbTabContent>\n                        <app-track></app-track>\n                    </ng-template>\n                </ngb-tab>\n                <ngb-tab title=\"Cat Sets\">\n                    <ng-template ngbTabContent>\n                        <app-cat-sets></app-cat-sets>\n                    </ng-template>\n                </ngb-tab>\n            </ngb-tabset>\n        </div>\n    </div>\n</div>\n<!-- <app-cat-sets></app-cat-sets>\n<app-cats></app-cats> -->"
 
 /***/ }),
 
@@ -312,7 +312,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <form (ngSubmit)=\"updateSeed()\" #seedForm=\"ngForm\">\n    <div class=\"form-group col-xs-3\">\n      <label for=\"seed\">Seed</label>\n      <input type=\"number\" class=\"form-control\" id=\"seed\" name=\"seed\"\n        [(ngModel)]=\"seed\">\n    </div>\n  </form>\n</div>"
+module.exports = "<form (ngSubmit)=\"updateSeed()\" #seedForm=\"ngForm\">\n  <div>\n    <label for=\"seed\">Seed</label>\n    <input type=\"number\" class=\"form-control\" id=\"seed\" name=\"seed\"\n      [(ngModel)]=\"seed\">\n  </div>\n</form>"
 
 /***/ }),
 
@@ -483,7 +483,7 @@ module.exports = ".tracks {\r\n    display: flex;\r\n}\r\n\r\n.track {\r\n    fl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"trackService.trackManager\">\n  <div class=\"form-group col-xs-2\">\n    <label>Select Gacha</label>\n    <select [(ngModel)]=\"selectedGacha\"\n            (ngModelChange)=\"onSelectedGachaChanged($event)\"\n            class=\"form-control\">\n      <option *ngFor=\"let gacha of trackService.trackManager.gachas\" \n              [ngValue]=\"gacha\">\n              {{gacha.name}}\n      </option>\n    </select>\n  </div>\n  <div class=\"form-group row\"></div>\n\n  <div class=\"tracks\" *ngIf=\"selectedGacha\">\n      <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackA\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n    <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackB\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n  </div>\n\n  <div>\n      <button class=\"btn btn-primary\" (click)=\"addRows(100)\">Add 100 Rows</button>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"trackService.trackManager\">\n  <div class=\"form-group row\">\n    <app-seed class=\"col-lg-4\"></app-seed>\n    <div class=\"col-lg-4\">\n      <label>Gacha Set</label>\n      <select [(ngModel)]=\"selectedGacha\"\n              (ngModelChange)=\"onSelectedGachaChanged($event)\"\n              class=\"form-control\">\n        <option *ngFor=\"let gacha of trackService.trackManager.gachas\" \n                [ngValue]=\"gacha\">\n                {{gacha.name}}\n        </option>\n      </select>\n    </div>\n  </div>\n  <div class=\"form-group row\"></div>\n\n  <div class=\"tracks\" *ngIf=\"selectedGacha\">\n      <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackA\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n    <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackB\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n  </div>\n\n  <div>\n      <button class=\"btn btn-primary\" (click)=\"addRows(100)\">Add 100 Rows</button>\n  </div>\n</div>\n"
 
 /***/ }),
 
