@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container root\">\n    <h1 class=\"h1\">{{title}}</h1>\n    <div class=\"row flex-xl\">\n        <div class=\"col-12 col-xl-12\">\n            <ngb-tabset>\n                <ngb-tab title=\"Track\">\n                    <ng-template ngbTabContent>\n                        <app-track></app-track>\n                    </ng-template>\n                </ngb-tab>\n                <ngb-tab title=\"Cat Sets\">\n                    <ng-template ngbTabContent>\n                        <app-cat-sets></app-cat-sets>\n                    </ng-template>\n                </ngb-tab>\n            </ngb-tabset>\n        </div>\n    </div>\n</div>\n<!-- <app-cat-sets></app-cat-sets>\n<app-cats></app-cats> -->"
+module.exports = "\n<nav class=\"navbar navbar-expand-md fixed-top navbar-light bg-light\">\n    <div class=\"navbar-brand\">{{title}}</div>\n    <div id=\"navbar\" class=\"navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link\" [routerLink]=\"['track']\" (click)=\"navbarCollapsed = true\">Track</a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link\" [routerLink]=\"['cat-sets']\" (click)=\"navbarCollapsed = true\">Cat Sets</a>\n            </li>\n        </ul>\n        <app-seed class=\"navbar-nav form-inline mt-2 mt-md-0 px-2\"></app-seed>\n        <app-set-selector class=\"navbar-nav form-inline mt-2 mt-md-0 px-2\"></app-set-selector>\n    </div>\n</nav>\n\n<div class=\"container root\">\n    <router-outlet class=\"ng-view\" autoscroll=\"true\"></router-outlet>\n    <!-- <app-track id=\"track\"></app-track>\n    <app-cat-sets id=\"cat-sets\"></app-cat-sets> -->\n    <!-- <div class=\"row flex-xl\">\n        <div class=\"col-12 col-xl-12\">\n            <ngb-tabset>\n                <ngb-tab title=\"Track\" id=\"track\">\n                    <ng-template ngbTabContent>\n                        <app-track></app-track>\n                    </ng-template>\n                </ngb-tab>\n                <ngb-tab title=\"Cat Sets\" id=\"sets\">\n                    <ng-template ngbTabContent>\n                        <app-cat-sets></app-cat-sets>\n                    </ng-template>\n                </ngb-tab>\n            </ngb-tabset>\n        </div>\n    </div> -->\n</div>\n<!-- <app-cat-sets></app-cat-sets>\n<app-cats></app-cats> -->"
 
 /***/ }),
 
@@ -95,13 +95,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_cats_cats_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/cats/cats.component */ "./src/app/components/cats/cats.component.ts");
-/* harmony import */ var _components_cat_sets_cat_sets_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/cat-sets/cat-sets.component */ "./src/app/components/cat-sets/cat-sets.component.ts");
-/* harmony import */ var _components_track_track_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/track/track.component */ "./src/app/components/track/track.component.ts");
-/* harmony import */ var _components_seed_seed_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/seed/seed.component */ "./src/app/components/seed/seed.component.ts");
-/* harmony import */ var _components_single_track_single_track_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/single-track/single-track.component */ "./src/app/components/single-track/single-track.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_cats_cats_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/cats/cats.component */ "./src/app/components/cats/cats.component.ts");
+/* harmony import */ var _components_cat_sets_cat_sets_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/cat-sets/cat-sets.component */ "./src/app/components/cat-sets/cat-sets.component.ts");
+/* harmony import */ var _components_track_track_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/track/track.component */ "./src/app/components/track/track.component.ts");
+/* harmony import */ var _components_seed_seed_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/seed/seed.component */ "./src/app/components/seed/seed.component.ts");
+/* harmony import */ var _components_single_track_single_track_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/single-track/single-track.component */ "./src/app/components/single-track/single-track.component.ts");
+/* harmony import */ var _components_set_selector_set_selector_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/set-selector/set-selector.component */ "./src/app/components/set-selector/set-selector.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -119,27 +121,37 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+var appRoutes = [
+    { path: 'track', component: _components_track_track_component__WEBPACK_IMPORTED_MODULE_9__["TrackComponent"] },
+    { path: 'cat-sets', component: _components_cat_sets_cat_sets_component__WEBPACK_IMPORTED_MODULE_8__["CatSetsComponent"] },
+    { path: '', redirectTo: '/track', pathMatch: 'full' },
+    { path: '**', redirectTo: '/track' }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _components_cats_cats_component__WEBPACK_IMPORTED_MODULE_6__["CatsComponent"],
-                _components_cat_sets_cat_sets_component__WEBPACK_IMPORTED_MODULE_7__["CatSetsComponent"],
-                _components_track_track_component__WEBPACK_IMPORTED_MODULE_8__["TrackComponent"],
-                _components_seed_seed_component__WEBPACK_IMPORTED_MODULE_9__["SeedComponent"],
-                _components_single_track_single_track_component__WEBPACK_IMPORTED_MODULE_10__["SingleTrackComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _components_cats_cats_component__WEBPACK_IMPORTED_MODULE_7__["CatsComponent"],
+                _components_cat_sets_cat_sets_component__WEBPACK_IMPORTED_MODULE_8__["CatSetsComponent"],
+                _components_track_track_component__WEBPACK_IMPORTED_MODULE_9__["TrackComponent"],
+                _components_seed_seed_component__WEBPACK_IMPORTED_MODULE_10__["SeedComponent"],
+                _components_single_track_single_track_component__WEBPACK_IMPORTED_MODULE_11__["SingleTrackComponent"],
+                _components_set_selector_set_selector_component__WEBPACK_IMPORTED_MODULE_12__["SetSelectorComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModule"].forRoot(),
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModule"].forRoot(),
+                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot(appRoutes),
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -167,7 +179,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"form-group col-xs-2\">\n    <label>Select Gacha</label>\n    <select [(ngModel)]=\"selectedSet\"\n            class=\"form-control\">\n      <option *ngFor=\"let gacha of catSets\" \n              [ngValue]=\"gacha\">\n              {{gacha.name}}\n      </option>\n    </select>\n</div>\n<div *ngIf=\"selectedSet\">\n  <div class=\"row\">\n    <label class=\"col-lg-4\">Uber Rare: {{selectedSet.uberRarePercent}}%</label>\n    <label class=\"col-lg-4\">Super Rare: {{selectedSet.superAndUberRarePercent - selectedSet.uberRarePercent}}%</label>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-lg-4\">\n      Uber Rares\n      <div *ngFor=\"let cat of selectedSet.uberRareCats; let i = index\">\n        {{i}}: {{cat.name}}\n      </div>\n    </div>\n    <div class=\"col-lg-4\">\n      Super Rares\n      <div *ngFor=\"let cat of selectedSet.superRareCats; let i = index\">\n        {{i}}: {{cat.name}}\n      </div>\n    </div>\n    <div class=\"col-lg-4\">\n      Rares\n      <div *ngFor=\"let cat of selectedSet.rareCats; let i = index\">\n        {{i}}: {{cat.name}}\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"selectedSet\">\n  <div class=\"row\">\n    <div class=\"col-lg-4\">\n      <h3 class=\"h3\">Uber Rares ({{selectedSet.uberRarePercent}}%)</h3>\n      <div *ngFor=\"let cat of selectedSet.uberRareCats; let i = index\">\n        {{i}}: {{cat.name}}\n      </div>\n    </div>\n    <div class=\"col-lg-4\">\n      <h3 class=\"h3\">Super Rares ({{selectedSet.superAndUberRarePercent - selectedSet.uberRarePercent}}%)</h3>\n      <div *ngFor=\"let cat of selectedSet.superRareCats; let i = index\">\n        {{i}}: {{cat.name}}\n      </div>\n    </div>\n    <div class=\"col-lg-4\">\n      <h3 class=\"h3\">Rares</h3>\n      <div *ngFor=\"let cat of selectedSet.rareCats; let i = index\">\n        {{i}}: {{cat.name}}\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -182,7 +194,7 @@ module.exports = "<div class=\"form-group col-xs-2\">\n    <label>Select Gacha</
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CatSetsComponent", function() { return CatSetsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_cat_set_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/cat-set.service */ "./src/app/services/cat-set.service.ts");
+/* harmony import */ var _services_track_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/track.service */ "./src/app/services/track.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -195,15 +207,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var CatSetsComponent = /** @class */ (function () {
-    function CatSetsComponent(catSetService) {
-        var _this = this;
-        this.catSetService = catSetService;
-        this.catSetService.getSets().subscribe(function (s) { _this.catSets = s; console.log(s); });
+    function CatSetsComponent(trackService) {
+        this.trackService = trackService;
     }
     CatSetsComponent.prototype.ngOnInit = function () {
-    };
-    CatSetsComponent.prototype.onSelect = function (set) {
-        this.selectedSet = set;
+        var _this = this;
+        this.trackService.selectedSet.subscribe(function (set) { return _this.selectedSet = set; });
     };
     CatSetsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -211,7 +220,7 @@ var CatSetsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./cat-sets.component.html */ "./src/app/components/cat-sets/cat-sets.component.html"),
             styles: [__webpack_require__(/*! ./cat-sets.component.css */ "./src/app/components/cat-sets/cat-sets.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_cat_set_service__WEBPACK_IMPORTED_MODULE_1__["CatSetService"]])
+        __metadata("design:paramtypes", [_services_track_service__WEBPACK_IMPORTED_MODULE_1__["TrackService"]])
     ], CatSetsComponent);
     return CatSetsComponent;
 }());
@@ -312,7 +321,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form (ngSubmit)=\"updateSeed()\" #seedForm=\"ngForm\">\n  <div>\n    <label for=\"seed\">Seed</label>\n    <input type=\"number\" class=\"form-control\" id=\"seed\" name=\"seed\"\n      [(ngModel)]=\"seed\">\n  </div>\n</form>"
+module.exports = "<form (ngSubmit)=\"updateSeed()\" #seedForm=\"ngForm\" class=\"form-inline\">\n    <label for=\"seed\" class=\"px-1\">Seed</label>\n    <input type=\"number\" class=\"form-control\" id=\"seed\" name=\"seed\"\n      [(ngModel)]=\"seed\">\n</form>"
 
 /***/ }),
 
@@ -373,6 +382,78 @@ var SeedComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/set-selector/set-selector.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/set-selector/set-selector.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/set-selector/set-selector.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/set-selector/set-selector.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"trackService.trackManager\" >\n  <select [(ngModel)]=\"selectedGacha\" (ngModelChange)=\"onSelectedGachaChanged($event)\"\n          class=\"form-control\" id=\"gachaSelect\">\n    <option *ngFor=\"let gacha of trackService.trackManager.gachas\" \n      [ngValue]=\"gacha\">\n      {{gacha.name}}\n    </option>\n  </select>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/set-selector/set-selector.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/set-selector/set-selector.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: SetSelectorComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetSelectorComponent", function() { return SetSelectorComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_track_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/track.service */ "./src/app/services/track.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SetSelectorComponent = /** @class */ (function () {
+    function SetSelectorComponent(trackService) {
+        this.trackService = trackService;
+        this.selectedGacha = null;
+    }
+    SetSelectorComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.trackService.selectedSet.subscribe(function (set) { return _this.selectedGacha = set; });
+    };
+    SetSelectorComponent.prototype.onSelectedGachaChanged = function (selectedGacha) {
+        this.trackService.setSelectedGacha(selectedGacha);
+    };
+    SetSelectorComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-set-selector',
+            template: __webpack_require__(/*! ./set-selector.component.html */ "./src/app/components/set-selector/set-selector.component.html"),
+            styles: [__webpack_require__(/*! ./set-selector.component.css */ "./src/app/components/set-selector/set-selector.component.css")]
+        }),
+        __metadata("design:paramtypes", [_services_track_service__WEBPACK_IMPORTED_MODULE_1__["TrackService"]])
+    ], SetSelectorComponent);
+    return SetSelectorComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/single-track/single-track.component.css":
 /*!********************************************************************!*\
   !*** ./src/app/components/single-track/single-track.component.css ***!
@@ -391,7 +472,7 @@ module.exports = ".superRare {\r\n    background-color: #bee5eb;\r\n}\r\n\r\n.po
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"track\">\n    <h2>Track {{track.id}}</h2>\n    <table class=\"table table-bordered table-hover\">\n      <thead>\n        <th>Roll</th>\n        <th>Score</th>\n        <th>Rarity</th>\n        <th>Cat</th>\n        <th>Guaranteed Uber</th>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let roll of track.rolls; let i = index\">\n          <th scope=\"row\">{{roll.id}}</th>\n          <td [ngClass]=\"scoreClass(roll)\">\n            {{roll.score}}\n          </td>\n          <td [ngClass]=\"rarityClass(roll.rolledCats[selectedGacha.name].cat.rarity)\">\n            {{roll.rolledCats[selectedGacha.name].cat.rarityString}}\n          </td>\n          <td>{{roll.rolledCats[selectedGacha.name].cat.name}}</td>\n          <td>\n            <div *ngIf=\"i+garUberOffset < track.rolls.length\">\n              {{track.rolls[i+garUberOffset].rolledCats[selectedGacha.name].guaranteedUber.name}}\n            </div>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n</div>\n"
+module.exports = "<div class=\"track\">\n    <h2>Track {{track.id}}</h2>\n    <table class=\"table table-bordered table-hover\">\n      <thead>\n        <th>Roll</th>\n        <th>Score</th>\n        <th>Rarity</th>\n        <th>Cat</th>\n        <th>Guaranteed Uber</th>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let roll of track.rolls; let i = index\">\n          <th scope=\"row\" id=\"{{roll.id}}\">{{roll.id}}</th>\n          <td [ngClass]=\"scoreClass(roll)\">\n            {{roll.score}}\n          </td>\n          <td [ngClass]=\"rarityClass(roll.rolledCats[selectedGacha.name].cat.rarity)\">\n            {{roll.rolledCats[selectedGacha.name].cat.rarityString}}\n          </td>\n          <td>{{roll.rolledCats[selectedGacha.name].cat.name}}</td>\n          <td>\n            <div *ngIf=\"i+garUberOffset < track.rolls.length\">\n              {{track.rolls[i+garUberOffset].rolledCats[selectedGacha.name].guaranteedUber.name}}\n            </div>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n</div>\n"
 
 /***/ }),
 
@@ -483,7 +564,7 @@ module.exports = ".tracks {\r\n    display: flex;\r\n}\r\n\r\n.track {\r\n    fl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"trackService.trackManager\">\n  <div class=\"form-group row\">\n    <app-seed class=\"col-lg-4\"></app-seed>\n    <div class=\"col-lg-4\">\n      <label>Gacha Set</label>\n      <select [(ngModel)]=\"selectedGacha\"\n              (ngModelChange)=\"onSelectedGachaChanged($event)\"\n              class=\"form-control\">\n        <option *ngFor=\"let gacha of trackService.trackManager.gachas\" \n                [ngValue]=\"gacha\">\n                {{gacha.name}}\n        </option>\n      </select>\n    </div>\n    <div class=\"col-lg-4\">\n      <label>Guaranteed Draw Count</label>\n      <select [(ngModel)]=\"garUberOffset\"\n              class=\"form-control\">\n        <option *ngFor=\"let drawCount of garUberDrawOptions\"\n                [ngValue]=\"drawCount\">\n          {{drawCount}}+1\n        </option>\n      </select>\n    </div>\n  </div>\n  <div class=\"form-group row\"></div>\n\n  <div class=\"tracks\" *ngIf=\"selectedGacha\">\n      <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackA\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n    <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackB\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n  </div>\n\n  <div>\n      <button class=\"btn btn-primary\" (click)=\"addRows(100)\">Add 100 Rows</button>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"trackService.trackManager\">\n  <div class=\"form-group row\">\n    <div class=\"col-lg-4\">\n      <label for=\"drawCountSelect\">Guaranteed Draw Count</label>\n      <select [(ngModel)]=\"garUberOffset\"\n              class=\"form-control\"\n              id=\"drawCountSelect\">\n        <option *ngFor=\"let drawCount of garUberDrawOptions\"\n                [ngValue]=\"drawCount\">\n          {{drawCount}}+1\n        </option>\n      </select>\n    </div>\n  </div>\n  <div class=\"form-group row\"></div>\n\n  <div class=\"tracks\" *ngIf=\"selectedGacha\">\n      <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackA\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n    <app-single-track class=\"track\" \n      [track]=\"trackService.trackManager.trackB\" \n      [garUberOffset]=\"garUberOffset\"\n      [selectedGacha]=\"selectedGacha\">\n    </app-single-track>\n  </div>\n\n  <div>\n      <button class=\"btn btn-primary\" (click)=\"addRows(100)\">Add 100 Rows</button>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -512,37 +593,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var TrackComponent = /** @class */ (function () {
     function TrackComponent(trackService) {
-        var _this = this;
         this.trackService = trackService;
         this.selectedGacha = null;
         this.garUberOffset = 10;
         this.garUberDrawOptions = [10, 7];
-        this.selectedGachaKey = "battlecats.selectedGacha";
-        this.trackService.isReady.subscribe(function (ready) {
-            if (_this.selectedGacha === null && ready)
-                _this.selectedGacha = _this.fetchSelectedGacha();
-        });
     }
     TrackComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.trackService.selectedSet.subscribe(function (set) { return _this.selectedGacha = set; });
     };
     TrackComponent.prototype.addRows = function (count) {
         if (count === void 0) { count = 100; }
         console.log("Adding rows");
         this.trackService.addRows(count);
         console.log(this.trackService.trackManager);
-    };
-    TrackComponent.prototype.onSelectedGachaChanged = function (selectedGacha) {
-        this.saveSelectedGacha(selectedGacha);
-    };
-    TrackComponent.prototype.fetchSelectedGacha = function () {
-        var gachaName = localStorage.getItem(this.selectedGachaKey);
-        var gachaIndex = this.trackService.trackManager.gachas.findIndex(function (s) { return s.name == gachaName; });
-        if (gachaIndex < 0)
-            gachaIndex = 0;
-        return this.trackService.trackManager.gachas[gachaIndex];
-    };
-    TrackComponent.prototype.saveSelectedGacha = function (set) {
-        localStorage.setItem(this.selectedGachaKey, set.name);
     };
     TrackComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1011,15 +1075,19 @@ var TrackService = /** @class */ (function () {
         this.catSetService = catSetService;
         this.seedSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](0);
         this.readySubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](false);
+        this.selectedSetSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](null);
         this.seedKey = "battlecats.seed";
+        this.selectedGachaKey = "battlecats.selectedGacha";
         this.seed = this.seedSubject.asObservable();
         this.isReady = this.readySubject.asObservable();
+        this.selectedSet = this.selectedSetSubject.asObservable();
         var seed = this.fetchSeed();
         this.seedGenerator = new _models_SeedGenerator__WEBPACK_IMPORTED_MODULE_1__["SeedGenerator"](seed);
         this.seedSubject.next(seed);
         catSetService.getSets().subscribe(function (sets) {
             _this.trackManager = new _models_TrackManager__WEBPACK_IMPORTED_MODULE_2__["TrackManager"](_this.seedGenerator, sets);
             _this.addRows();
+            _this.setSelectedGacha(_this.fetchSelectedGacha());
             _this.readySubject.next(true);
         });
     }
@@ -1035,6 +1103,20 @@ var TrackService = /** @class */ (function () {
         localStorage.setItem(this.seedKey, String(seed));
         this.trackManager.updateSeed(seed);
         this.seedSubject.next(seed);
+    };
+    TrackService.prototype.setSelectedGacha = function (set) {
+        this.saveSelectedGacha(set);
+        this.selectedSetSubject.next(set);
+    };
+    TrackService.prototype.fetchSelectedGacha = function () {
+        var gachaName = localStorage.getItem(this.selectedGachaKey);
+        var gachaIndex = this.trackManager.gachas.findIndex(function (s) { return s.name == gachaName; });
+        if (gachaIndex < 0)
+            gachaIndex = 0;
+        return this.trackManager.gachas[gachaIndex];
+    };
+    TrackService.prototype.saveSelectedGacha = function (set) {
+        localStorage.setItem(this.selectedGachaKey, set.name);
     };
     TrackService.prototype.fetchSeed = function () {
         return +localStorage.getItem(this.seedKey);

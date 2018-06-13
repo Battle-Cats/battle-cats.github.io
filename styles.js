@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@import url('https://unpkg.com/bootstrap@4.1.1/dist/css/bootstrap.min.css');\n"
+module.exports = "@import url('https://unpkg.com/bootstrap@4.1.1/dist/css/bootstrap.min.css');\n\nbody {\n    min-height: 80rem;\n    padding-top: 5rem;\n  }\n\n.anchor {\n  padding-top: 60px;\n  margin-top: -60px;\n}"
 
 /***/ }),
 
